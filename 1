@@ -1,0 +1,12 @@
+"https://uclapi.com/roombookings/bookings?token=uclapi-a70a65632c8a00-741ce156b657a2-1ce2e3ebd55219-24c1cb0de0a38b&siteid=212&start_datetime="+datetime
+function apiGet() {
+  document.getElementById("clickMe").onclick = fetch()
+.then((response) => {
+  return response.json()
+
+})
+.then((json) => {
+  document.getElementById("json").innerHTML = JSON.stringify(json, undefined, 2);
+  document.getElementById("json").onclick = document.getElementById("json").style.cssText = "padding: 10px; transition: .2s ease-out;";
+  })
+}

@@ -1,0 +1,22 @@
+* {
+ font-family: "Karla" !important;
+}
+
+pre {
+font-family: "Karla";
+}
+h1 {
+  font-weight: bold;
+  transition: .2s ease-out;
+}
+
+.json
+{
+  color: #ffffff;
+}
+
+.time pre
+{
+  color: #ffffff;
+  font-family: "Karla";
+}
