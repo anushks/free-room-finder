@@ -10,30 +10,74 @@
                 + currentdate.getDate() + "T"
                 + (currentdate.getHours()+1) + ":00:00"
                 + "+00:00"
-//START JSON REQUEST
-  var xmlhttp = new XMLHttpRequest();
+
+ var crooms = "";
+ var rrooms = "";
+//START JSON REQUEST FOR BOOKINGS
+var xmlhttp = new XMLHttpRequest();
 xmlhttp.onreadystatechange = function() {
-    
-    if (this.readyState == 4 && this.status == 200) {
-        myObj = JSON.parse(this.responseText);
-        var i = 0;
-        var y = parseFloat(myObj.count);
-        var text = "";
-      while (i <= y) {
-              text += myObj.bookings[i].roomname + "<br>";
-                i++;
-            }
-            
-        document.getElementById("demo").innerHTML = text;
-        document.getElementById("test").innerHTML = parseInt(myObj.count);
-    } 
+
+  
+    myObj = JSON.parse(this.responseText);
+    var i = 0;
+    var y = parseInt(myObj.count);
+    var bookings = "";
+    while (i < y) {
+      bookings += myObj.bookings[i].roomname + ",";
+      i++;
+    }
+
+    document.getElementById("bookedRooms").innerHTML = bookings;
 };
 
-xmlhttp.open("GET", "https://uclapi.com/roombookings/bookings?token=uclapi-a70a65632c8a00-741ce156b657a2-1ce2e3ebd55219-24c1cb0de0a38b&siteid=212&start_datetime=" + startdatetime + "&end_datetime=" + enddatetime, true);
+xmlhttp.open("GET", "https://uclapi.com/roombookings/bookings?token=uclapi-a70a65632c8a00-741ce156b657a2-1ce2e3ebd55219-24c1cb0de0a38b&siteid=212&start_datetime=2017-02-13T09:00:00+00:00&end_datetime=2017-02-13T12:00:00+00:00", true);
 xmlhttp.send();
-//END JSON REQUEST  
+//END JSON REQUEST FOR BOOKINGS
 
   function date() {
     document.getElementById("timebutton").onclick = document.getElementById("time").innerHTML = startdatetime + enddatetime;
     document.getElementById("timebutton").onclick = document.getElementById("time").style.cssText = "padding: 10px; transition: .2s ease-out;";
   }
+
+//JSON REQUESTS FOR CRUCIFORM
+var xmlhttp = new XMLHttpRequest();
+xmlhttp.onreadystatechange = function crooms() {
+
+    myCRooms = JSON.parse(this.responseText);
+    var i = 0;
+   
+    while (i < 14) {
+      crooms += myCRooms.rooms[i].roomname + ",";
+      i++;
+    }
+
+    document.getElementById("CRooms").innerHTML = crooms;
+
+};
+
+
+xmlhttp.open("GET", "https://uclapi.com/roombookings/rooms?token=uclapi-a70a65632c8a00-741ce156b657a2-1ce2e3ebd55219-24c1cb0de0a38b&siteid=212", true);
+xmlhttp.send();
+
+//JSN REQUESTS FOR ROCKEFELLER
+var xmlhttp = new XMLHttpRequest();
+xmlhttp.onreadystatechange = function() {
+
+  
+    myRRooms = JSON.parse(this.responseText);
+
+    var i = 0;
+    
+    while (i < 6) {
+      rrooms += myRRooms.rooms[i].roomname + ",";
+      i++;
+    }
+
+    document.getElementById("RRooms").innerHTML = rrooms;
+
+};
+
+xmlhttp.open("GET", "https://uclapi.com/roombookings/rooms?token=uclapi-a70a65632c8a00-741ce156b657a2-1ce2e3ebd55219-24c1cb0de0a38b&siteid=374", true);
+xmlhttp.send();
+
+
