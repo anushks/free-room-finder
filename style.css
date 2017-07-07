@@ -10,6 +10,9 @@ h1 {
   transition: .2s ease-out;
 }
 
+h3 {
+	text-align: center;
+}
 .json
 {
   color: #ffffff;
