@@ -94,7 +94,7 @@ for (var i=0; i<bookingsArray.length; i++) {
     }
 }
 document.getElementById("RRooms").innerHTML = allRoomsArray.toString();
-document.getElementById("hfree").innerHTML = "Rooms currently free";
+document.getElementById("hfree").innerHTML = "Rooms currently unbooked*";
 document.getElementById("hbook").innerHTML = "Rooms currently booked";
 
 }
