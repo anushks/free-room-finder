@@ -11,6 +11,7 @@
                 + (currentdate.getHours()+1) + ":00:00"
                 + "+00:00"
 
+function hi() {
  var crooms = "";
  var rrooms = "";
   var bookings = "";
@@ -94,3 +95,4 @@ for (var i=0; i<bookingsArray.length; i++) {
 }
 document.getElementById("RRooms").innerHTML = allRoomsArray.toString();
 
+}
