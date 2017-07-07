@@ -93,3 +93,4 @@ for (var i=0; i<bookingsArray.length; i++) {
     }
 }
 document.getElementById("RRooms").innerHTML = allRoomsArray.toString();
+
