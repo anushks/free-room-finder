@@ -32,7 +32,7 @@ xmlhttp.onreadystatechange = function() {
     document.getElementById("bookedRooms").innerHTML = bookings;
 };
 
-xmlhttp.open("GET", "https://uclapi.com/roombookings/bookings?token=uclapi-a70a65632c8a00-741ce156b657a2-1ce2e3ebd55219-24c1cb0de0a38b&siteid=212&siteid=374&start_datetime=2017-02-13T09:00:00+00:00&end_datetime=2017-02-13T12:00:00+00:00", false);
+xmlhttp.open("GET", "https://uclapi.com/roombookings/bookings?token=uclapi-ecdbd736fd1618-de73e1e4acf2c0-820feadd3a9576-08532302684bd4&siteid=212&siteid=374&start_datetime="+startdatetime+"&end_datetime="+enddatetime+"", false);
 xmlhttp.send();
 //END JSON REQUEST FOR BOOKINGS
 
@@ -58,7 +58,7 @@ xmlhttp.onreadystatechange = function() {
 };
 
 
-xmlhttp.open("GET", "https://uclapi.com/roombookings/rooms?token=uclapi-a70a65632c8a00-741ce156b657a2-1ce2e3ebd55219-24c1cb0de0a38b&siteid=212", false);
+xmlhttp.open("GET", "https://uclapi.com/roombookings/rooms?token=uclapi-ecdbd736fd1618-de73e1e4acf2c0-820feadd3a9576-08532302684bd4&siteid=212", false);
 xmlhttp.send();
 
 //JSN REQUESTS FOR ROCKEFELLER
@@ -79,7 +79,7 @@ xmlhttp.onreadystatechange = function() {
 
 };
 
-xmlhttp.open("GET", "https://uclapi.com/roombookings/rooms?token=uclapi-a70a65632c8a00-741ce156b657a2-1ce2e3ebd55219-24c1cb0de0a38b&siteid=374", false);
+xmlhttp.open("GET", "https://uclapi.com/roombookings/rooms?token=uclapi-ecdbd736fd1618-de73e1e4acf2c0-820feadd3a9576-08532302684bd4&siteid=374", false);
 xmlhttp.send();
 
 
