@@ -1,19 +1,40 @@
+<!DOCTYPE html>
 <HTML>
 <link rel="stylesheet" href="style.css" />
 <link rel="stylesheet" href="materialize.css" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<link href="https://fonts.googleapis.com/css?family=Karla" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+
 <body>
-  <div class="title">
-  <h1 align="center">UCL Medical School Free Room Checker</h1>
-  </div>
-  <div align="center">
-    <input class="waves-effect waves-light btn-large orange" id="btn" type="button" value="Check rooms" onclick="hi()"/></div>
- <h3 id="hfree"></h3>
-<div class="card teal json"><pre id="RRooms" align="center"></pre></div>
-    <h3 id="hbook"></h3>
-<div class="card teal json"><pre id="bookedRooms" align="center"></pre></div>
-<p id="test"></p>
+    <div class="splash z-depth-1 ">
+        <h1 align="center" class="white-text">UCL Medical School Free Room Checker</h1>
+        <div align="center">
+            <input class="waves-effect waves-light btn-large grey darken-3" id="btn" type="button" value="Check rooms" onclick="hi()" />
+        </div>
+    </div>
+    <div class="content container">
+        <div class="row">
+            <div class="col s12 m6">
+                <h3 id="hfree"></h3><hr>
+                <div class="json"><pre id="RRooms" align="center"></pre>
+                </div>
+            </div>
+            <div class="col s12 m6">
+                <h3 id="hbook"></h3><hr>
+                <div class="json"><pre id="bookedRooms" align="center"></pre>
+                </div>
+            </div>
+        </div>
+    </div>
+    <footer class="page-footer blue-grey">
+           <div class="footer-copyright">
+           <div class="container">
+            © 2017 Anush Shasidhara
+            <a class="grey-text text-lighten-4 right" href="https://uclapi.com/">This was built using <b>UCL API</b>.</a>
+            </div>
+          </div>
+        </footer>
 </body>
 <script src="scripts.js"></script>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+</html>

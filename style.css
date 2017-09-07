@@ -1,17 +1,22 @@
-* {
- font-family: "Karla" !important;
-}
 
 pre {
-font-family: "Karla";
+font-family: "Roboto";
 }
+
+p
+{
+font-family: "Roboto";
+}
+
 h1 {
-  font-weight: bold;
+  font-family: "Roboto";
+  font-weight: 300;
   transition: .2s ease-out;
 }
 
 h3 {
 	text-align: center;
+	color: #ffffff;
 }
 .json
 {
@@ -21,5 +26,30 @@ h3 {
 .time pre
 {
   color: #ffffff;
-  font-family: "Karla";
+  font-family: "Roboto";
 }
+
+.splash
+{
+	padding: 2em;
+	background-image: url("img/splash.jpg");
+	background-position: center;
+	background-size: 100% 600px;
+}
+
+.content
+{
+	background-color: #424242;
+	vertical-align: top;
+}
+
+body {
+	background-color: #424242;
+    display: flex;
+    min-height: 100vh;
+    flex-direction: column;
+  }
+
+main {
+    flex: 1 0 auto;
+ }
