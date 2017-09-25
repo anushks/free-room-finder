@@ -4,12 +4,12 @@
                 + "0" + (currentdate.getMonth()+1) +"-"
                 + currentdate.getDate() + "T"
                 + currentdate.getHours() + ":00:00"
-                + "+00:00";
+                + "+01:00";
   var enddatetime = currentdate.getFullYear() + "-"
                 + "0" + (currentdate.getMonth()+1) +"-"
                 + currentdate.getDate() + "T"
                 + (currentdate.getHours()+1) + ":00:00"
-                + "+00:00"
+                + "+01:00"
 
 function hi() {
  var crooms = "";
@@ -32,7 +32,7 @@ xmlhttp.onreadystatechange = function() {
     document.getElementById("bookedRooms").innerHTML = bookings;
 };
 
-xmlhttp.open("GET", "https://uclapi.com/roombookings/bookings?token=uclapi-ecdbd736fd1618-de73e1e4acf2c0-820feadd3a9576-08532302684bd4&siteid=212&siteid=374&start_datetime="+startdatetime+"&end_datetime="+enddatetime+"", false);
+xmlhttp.open("GET", "https://uclapi.com/roombookings/bookings?token=uclapi-ecdbd736fd1618-de73e1e4acf2c0-820feadd3a9576-08532302684bd4&siteid=212&start_datetime="+startdatetime+"&end_datetime="+enddatetime+"", false);
 xmlhttp.send();
 //END JSON REQUEST FOR BOOKINGS
 
