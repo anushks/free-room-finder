@@ -1,15 +1,29 @@
-  var currentdate = new Date();
-  var timezone = -(new Date().getTimezoneOffset() / 60)
-  var startdatetime = currentdate.getFullYear() + "-"
+
+
+
+var currentdate = new Date();
+var timezone = -(new Date().getTimezoneOffset() / 60)
+if (currentdate.getHours() <= 9) {
+var startdatetime = currentdate.getFullYear() + "-"
+                + "0" + (currentdate.getMonth()+1) +"-"
+                + currentdate.getDate() + "T"
+                + "0"+currentdate.getHours() + ":00:00"
+                + "+01:00";
+              }
+        else {
+          var startdatetime = currentdate.getFullYear() + "-"
                 + "0" + (currentdate.getMonth()+1) +"-"
                 + currentdate.getDate() + "T"
                 + currentdate.getHours() + ":00:00"
                 + "+01:00";
-  var enddatetime = currentdate.getFullYear() + "-"
+        }
+var enddatetime = currentdate.getFullYear() + "-"
                 + "0" + (currentdate.getMonth()+1) +"-"
                 + currentdate.getDate() + "T"
                 + (currentdate.getHours()+1) + ":00:00"
                 + "+01:00"
+
+
 
 function hi() {
  var crooms = "";
