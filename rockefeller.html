@@ -1,16 +1,21 @@
 <!DOCTYPE html>
 <HTML>
+<head>
 <link rel="stylesheet" href="style.css" />
 <link rel="stylesheet" href="materialize.css" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+<script src="scripts2.js"></script>
+<script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
 
+</head>
 <body>
     <div class="splash2 z-depth-1 ">
         <h1 align="center" class="white-text">Rockefeller Free Room Finder</h1>
         <div align="center">
             <input class="waves-effect waves-light btn-large grey darken-3" id="btn" type="button" value="Check rooms" onclick="hi()" />
-            <input class="waves-effect waves-light btn-large purple darken-3" id="btn" type="button" value="Cruciform Checker" onclick="javascript:location.href='index.html'"/>
+            <input class="waves-effect waves-light btn-large purple darken-3 modal-trigger" id="btn" type="button" value="Cruciform Checker" onclick="javascript:location.href='index.html'"/>
+            <a class="waves-effect waves-light btn-large blue darken-3 modal-trigger" id="btn" type="button"href="#modal1">About</a>
         </div>
     </div>
     <div class="content container">
@@ -27,15 +32,34 @@
             </div>
         </div>
     </div>
+    <div id="modal1" class="modal blue darken-3 white-text">
+            <div class="modal-content">
+              <h4>About</h4>
+              <p>This free room finder searches the UCL Room Booking database in order to find rooms that are currently unbooked - you can hopefully use this to find rooms to study in when the Cruciform Hub is full (i.e. always). <em>However, there are a couple of limitations:</em></p>
+              <ol>
+                  <li>Just because a room is unbooked doesn't mean that some students haven't already found and occupied the room.</li>
+                  <li>Last minute room bookings made by the union may not be put through the database <em>(sadness)</em>.</li>
+              </ol>
+            </div>
+            <div class="modal-footer">
+              <a href="#!" class="modal-action modal-close waves-effect waves-green btn-flat">Close</a>
+            </div>
+          </div>
     <footer class="page-footer blue-grey">
            <div class="footer-copyright">
            <div class="container">
-            © 2017 Anush Shashidhara
+            &copy; 2017 Anush Shashidhara
             <a class="grey-text text-lighten-4 right" href="https://uclapi.com/">This was built using<b> UCL API</b>.</a>
             </div>
           </div>
         </footer>
 </body>
-<script src="scripts2.js"></script>
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+<script>
+        $(document).ready(function(){
+            // the "href" attribute of the modal trigger must specify the modal ID that wants to be triggered
+            $('.modal').modal();
+            });
+        </script>
+
+<script src="materialize.js"></script>
 </html>

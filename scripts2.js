@@ -1,4 +1,7 @@
-  var currentdate = new Date();
+$(document).ready(function(){
+    // the "href" attribute of the modal trigger must specify the modal ID that wants to be triggered
+    $('.modal').modal();
+  });  var currentdate = new Date();
   var timezone = -(new Date().getTimezoneOffset() / 60)
   if (currentdate.getHours() <= 9) {
 var startdatetime = currentdate.getFullYear() + "-"

@@ -112,4 +112,3 @@ document.getElementById("hfree").innerHTML = "Rooms currently unbooked*";
 document.getElementById("hbook").innerHTML = "Rooms currently booked";
 
 }
-
