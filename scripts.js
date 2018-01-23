@@ -11,13 +11,13 @@ var startdatetime = currentdate.getFullYear() + "-0"
                 + "+01:00";
               }
         else {
-          var startdatetime = currentdate.getFullYear() + "-"
+          var startdatetime = currentdate.getFullYear() + "-0"
                 +(currentdate.getMonth()+1) +"-"
                 + currentdate.getDate() + "T"
                 + currentdate.getHours() + ":00:00"
                 + "+01:00";
         }
-var enddatetime = currentdate.getFullYear() + "-"
+var enddatetime = currentdate.getFullYear() + "-0"
                 +(currentdate.getMonth()+1) +"-"
                 + currentdate.getDate() + "T"
                 + (currentdate.getHours()+1) + ":00:00"
