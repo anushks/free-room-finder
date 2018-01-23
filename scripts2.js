@@ -1,10 +1,8 @@
-$(document).ready(function(){
-    // the "href" attribute of the modal trigger must specify the modal ID that wants to be triggered
-    $('.modal').modal();
-  });  var currentdate = new Date();
+
+  var currentdate = new Date();
   var timezone = -(new Date().getTimezoneOffset() / 60)
   if (currentdate.getHours() <= 9) {
-var startdatetime = currentdate.getFullYear() + "-"
+var startdatetime = currentdate.getFullYear() + "-0"
                 + (currentdate.getMonth()+1) +"-"
                 + currentdate.getDate() + "T"
                 + "0"+currentdate.getHours() + ":00:00"
@@ -17,7 +15,7 @@ var startdatetime = currentdate.getFullYear() + "-"
                 + currentdate.getHours() + ":00:00"
                 + "+01:00";
         }
-  var enddatetime = currentdate.getFullYear() + "-"
+  var enddatetime = currentdate.getFullYear() + "-0"
                 + (currentdate.getMonth()+1) +"-"
                 + currentdate.getDate() + "T"
                 + (currentdate.getHours()+1) + ":00:00"
@@ -110,3 +108,8 @@ document.getElementById("hfree").innerHTML = "Rooms currently unbooked*";
 document.getElementById("hbook").innerHTML = "Rooms currently booked";
 
 }
+
+$(document).ready(function(){
+  // the "href" attribute of the modal trigger must specify the modal ID that wants to be triggered
+  $('.modal').modal();
+});  
