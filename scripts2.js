@@ -11,7 +11,7 @@ var startdatetime = currentdate.getFullYear() + "-"
                 + "+01:00";
               }
         else {
-          var startdatetime = currentdate.getFullYear() + "-"
+          var startdatetime = currentdate.getFullYear() + "-0"
                 + (currentdate.getMonth()+1) +"-"
                 + currentdate.getDate() + "T"
                 + currentdate.getHours() + ":00:00"

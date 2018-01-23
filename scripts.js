@@ -4,7 +4,7 @@
 var currentdate = new Date();
 var timezone = -(new Date().getTimezoneOffset() / 60)
 if (currentdate.getHours() <= 9) {
-var startdatetime = currentdate.getFullYear() + "-"
+var startdatetime = currentdate.getFullYear() + "-0"
                 + (currentdate.getMonth()+1) +"-"
                 + currentdate.getDate() + "T"
                 + "0"+currentdate.getHours() + ":00:00"
